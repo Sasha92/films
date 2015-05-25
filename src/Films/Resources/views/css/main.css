@@ -1,0 +1,55 @@
+body {
+    margin:0;
+    padding: 0;
+    background-color: #B4FFC9;
+}
+.center {
+    text-align: center;
+}
+.add-title {
+    text-align: center;
+    color: #193bdd;
+}
+.delete {
+    margin-left: 100px;
+    text-decoration: none;
+    color:#dd4444;
+}
+.films {
+    margin-left: 40%;
+}
+.header-h1 {
+    display: inline;
+    margin: 10%;
+
+}
+.header{
+    text-decoration: none;
+    color: #193bdd;
+}
+.menu {
+    list-style-type: none;
+    text-align: center;
+    margin: 30px;
+}
+.menu>li {
+    display: inline;
+    margin: 20px;
+}
+.menu >li>a {
+    color: #193bdd;
+    height: 40px;
+}
+.pages {
+    list-style: none;
+    text-align: center;
+}
+.pages>li {
+    display: inline;
+}
+.pages>li>a {
+    text-decoration: none;
+}
+.search {
+    display: inline;
+}

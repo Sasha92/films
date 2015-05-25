@@ -14,19 +14,19 @@
     {% endif %}
     </ul>
 
-    <ol>
+    <table class="films">
         {% for film in films %}
-            <li>
-                <a href="/films/show?id={{ film.id }}">
+            <tr>
+                <td><a href="/films/show?id={{ film.id }}">
                     {{ film.title|e }}
-                </a>
-                <a href="delete?id={{ film.id }}">X</a>
+                </a></td>
+               <td> <a href="delete?id={{ film.id }}" class="delete">X</a></td>
 
-            </li>
+            </tr>
         {% endfor %}
-    </ol>
+    </table>
     {% if pages is not empty and pages !=0 %}
-        <ul>
+        <ul class="pages">
             {% for page in 1..pages %}
                 <li>
                     <a href="/films/list?page={{ page }}">

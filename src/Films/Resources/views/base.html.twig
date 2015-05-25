@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <title>Films</title>
     <meta charset='utf-8' />
+    <style>
+        {% include 'css/main.css' %}
+    </style>
 </head>
 <body>
-
-    <h1><a href="list">Films</a></h1>
-    <form name="search" method="get" action="list">
+    <h1 class="header-h1"><a href="list" class="header">Films</a></h1>
+    <form name="search" method="get" action="list" class='search'>
     <label><input type="radio"  name="search_type" id="search_actor"  value="actor" checked />Search actor</label>
     <label><input type="radio"  name="search_type" id="search_film"  value="film"/>Search film</label>
     <input type="text" name="search"  placeholder="Search">
     <button type="submit" value="Search">Search</button>
     </form>
 
-    <div>
-        <h3><a href="add">Add new film</a></h3>
+    <div class="link">
+        <ul class="menu">
+        <li><a href="add">Add new film</a></li>
+        <li><a href="import">Import films</a></li>
+        </ul>
     </div>
 
-    <div>
-        <h3><a href="import">Import films</a></h3>
-    </div>
     <div id="content">
         {% block body %}{% endblock %}
     </div>
