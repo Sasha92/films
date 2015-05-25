@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Films</title>
+    <meta charset='utf-8' />
+</head>
+<body>
+
+    <h1><a href="list">Films</a></h1>
+    <form name="search" method="get" action="list">
+    <label><input type="radio"  name="search_type" id="search_actor"  value="actor" checked />Search actor</label>
+    <label><input type="radio"  name="search_type" id="search_film"  value="film"/>Search film</label>
+    <input type="text" name="search"  placeholder="Search">
+    <button type="submit" value="Search">Search</button>
+    </form>
+
+    <div>
+        <h3><a href="add">Add new film</a></h3>
+    </div>
+
+    <div>
+        <h3><a href="import">Import films</a></h3>
+    </div>
+    <div id="content">
+        {% block body %}{% endblock %}
+    </div>
+
+</body>
+</html>

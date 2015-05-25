@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <ul>
+    {% if  searchFilms is not  empty  %}
+        {% for film in searchFilms %}
+            <li>
+                <a href="/films/show?id={{ film.id }}">
+                    {{ film.title}}
+                </a>
+                <a href="delete?id={{ film.id }}">X</a>
+            </li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+
+    <ol>
+        {% for film in films %}
+            <li>
+                <a href="/films/show?id={{ film.id }}">
+                    {{ film.title|e }}
+                </a>
+                <a href="delete?id={{ film.id }}">X</a>
+
+            </li>
+        {% endfor %}
+    </ol>
+    {% if pages is not empty and pages !=0 %}
+        <ul>
+            {% for page in 1..pages %}
+                <li>
+                    <a href="/films/list?page={{ page }}">
+                        {{ page}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

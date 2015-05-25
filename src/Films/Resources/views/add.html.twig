@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2>Add new film</h2>
+    <form name="film" method="post" action="add">
+        <p>
+        <label for="title">Title</label>
+        <input type="text"  name="title" id="title" required>
+        <label for="year">Year</label>
+        <input type="text"  name="year" id="year" required placeholder="2015">
+        <label for="format">Format</label>
+        <select name="format" id="format">
+            <option value="VHS">VHS</option>
+            <option value="DVD">DVD</option>
+            <option value="Blu-Ray">Blu-Ray</option>
+        </select>
+            </p>
+        <label for="actors">Actors</label>
+        <p><textarea name="actors" id="actors" rows="5" cols="30" required placeholder="Fullname actors "></textarea></p>
+        <button type="submit">Add film</button>
+    </form>
+{% endblock %}

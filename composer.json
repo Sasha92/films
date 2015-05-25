@@ -1,0 +1,13 @@
+{
+    "name": "sasha92/films",
+    "description": "Example project",
+    "authors": [
+        {
+            "name": "Sasha Kirmach",
+            "email": "sashakirmach@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.18"
+    }
+}

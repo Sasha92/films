@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h3>Import films from  text file</h3>
+    <h3>Download file:</h3>
+
+    <form action="import" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" /><br />
+        <input type="submit" name="download" value="Download" />
+    </form>
+
+{% endblock %}

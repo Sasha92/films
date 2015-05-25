@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Film Info: {{ film.title }}</h1>
+    <ul>
+        <li>Year - {{ film.year }}</li>
+        <li>Format - {{ film.format }}</li>
+
+        <li>Actors -
+            {% for actor in film.actors %}
+                <span>{{ actor }}</span>
+            {% endfor %}
+        </li>
+    </ul>
+{% endblock %}
